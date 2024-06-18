@@ -1,0 +1,93 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\AnimalCoins.png" />
+      <Resource Include="Resources\AnimalCoins.png" />
+      <None Remove="Resources\MyForest_Logo.png" />
+      <Resource Include="Resources\MyForest_Logo.png" />
+      <None Remove="Resources\pine1.png" />
+      <None Remove="Resources\pine2.png" />
+      <None Remove="Resources\pine3.png" />
+      <None Remove="Resources\pine4.png" />
+      <None Remove="Resources\pine5.png" />
+      <None Remove="Resources\pine5-r.png" />
+      <None Remove="Resources\TreeCoins.png" />
+      <Resource Include="Resources\TreeCoins.png" />
+      <None Remove="Resources\birch2.png" />
+      <None Remove="Resources\birch1.png" />
+      <None Remove="Resources\birch3.png" />
+      <None Remove="Resources\birch4.png" />
+      <None Remove="Resources\birch5.png" />
+      <Resource Include="Resources\trees\birch\birch1.png" />
+      <Resource Include="Resources\trees\birch\birch2.png" />
+      <Resource Include="Resources\trees\birch\birch3.png" />
+      <Resource Include="Resources\trees\birch\birch4.png" />
+      <Resource Include="Resources\trees\birch\birch5.png" />
+      <Resource Include="Resources\trees\pine\pine1.png" />
+      <Resource Include="Resources\trees\pine\pine2.png" />
+      <Resource Include="Resources\trees\pine\pine3.png" />
+      <Resource Include="Resources\trees\pine\pine4.png" />
+      <Resource Include="Resources\trees\pine\pine5.png" />
+      <None Remove="Resources\trees\oak\oak5.png" />
+      <Resource Include="Resources\trees\oak\oak5.png" />
+      <None Remove="Resources\trees\oak\oak4.png" />
+      <Resource Include="Resources\trees\oak\oak4.png" />
+      <None Remove="Resources\trees\oak\oak3.png" />
+      <Resource Include="Resources\trees\oak\oak3.png" />
+      <None Remove="Resources\trees\oak\oak2.png" />
+      <Resource Include="Resources\trees\oak\oak2.png" />
+      <None Remove="Resources\trees\oak\oak1.png" />
+      <Resource Include="Resources\trees\oak\oak1.png" />
+      <None Remove="Resources\animals\deer\deer5.png" />
+      <Resource Include="Resources\animals\deer\deer1.png" />
+      <None Remove="Resources\animals\deer\deer4.png" />
+      <Resource Include="Resources\animals\deer\deer2.png" />
+      <None Remove="Resources\animals\deer\deer3.png" />
+      <Resource Include="Resources\animals\deer\deer3.png" />
+      <None Remove="Resources\animals\deer\deer2.png" />
+      <Resource Include="Resources\animals\deer\deer4.png" />
+      <None Remove="Resources\animals\deer\deer1.png" />
+      <Resource Include="Resources\animals\deer\deer5.png" />
+      <None Remove="Resources\animals\boar\boar5.png" />
+      <Resource Include="Resources\animals\boar\boar5.png" />
+      <None Remove="Resources\animals\boar\boar4.png" />
+      <Resource Include="Resources\animals\boar\boar4.png" />
+      <None Remove="Resources\animals\boar\boar3.png" />
+      <Resource Include="Resources\animals\boar\boar3.png" />
+      <None Remove="Resources\animals\boar\boar2.png" />
+      <Resource Include="Resources\animals\boar\boar2.png" />
+      <None Remove="Resources\animals\boar\boar1.png" />
+      <Resource Include="Resources\animals\boar\boar1.png" />
+      <None Remove="Resources\animals\bear\bear5.png" />
+      <Resource Include="Resources\animals\bear\bear1.png" />
+      <None Remove="Resources\animals\bear\bear4.png" />
+      <Resource Include="Resources\animals\bear\bear2.png" />
+      <None Remove="Resources\animals\bear\bear3.png" />
+      <Resource Include="Resources\animals\bear\bear3.png" />
+      <None Remove="Resources\animals\bear\bear2.png" />
+      <Resource Include="Resources\animals\bear\bear4.png" />
+      <None Remove="Resources\animals\bear\bear1.png" />
+      <Resource Include="Resources\animals\bear\bear5.png" />
+      <None Remove="Resources\gras2.png" />
+      <Resource Include="Resources\gras2.png" />
+      <None Remove="Resources\gras1.png" />
+      <Resource Include="Resources\gras1.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ApplicationDefinition Include="Another\App.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </ApplicationDefinition>
+    </ItemGroup>
+
+</Project>

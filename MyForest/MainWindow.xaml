@@ -1,0 +1,139 @@
+﻿<Window x:Class="MyForest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyForest"
+        mc:Ignorable="d"
+        Title="Tower Defense" Height="800" Width="1014"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResize">
+    
+    
+    
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="800"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            
+            
+            <Grid x:Name="BattlefieldContainer" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent">
+                <local:ForestMap Background="Transparent" x:Name="ActiveForestMap"/>
+            </Grid>
+            
+            <Border Grid.Column="1" >
+                 <Border.Background>
+                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                         <GradientStop Color="Gray" Offset="0.0"/>
+                     </LinearGradientBrush>
+                 </Border.Background>
+                 <Grid HorizontalAlignment="Stretch">
+                
+                     <Grid.RowDefinitions>
+                         <RowDefinition Height="80"></RowDefinition>
+                         <RowDefinition Height="125"></RowDefinition>
+                         <RowDefinition Height="140"></RowDefinition>
+                         <RowDefinition Height="140"></RowDefinition>
+                         <RowDefinition Height="270"></RowDefinition>
+                         <RowDefinition Height="*"></RowDefinition>
+                     </Grid.RowDefinitions>
+                
+                     <Border  Background="DimGray">
+                         <Image Source="Resources/MyForest_Logo.png"
+                                     Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top"></Image>
+                     </Border>
+                     
+                     <Grid Grid.Row="1">
+                         <Grid.RowDefinitions>
+                             <RowDefinition Height="60"></RowDefinition>
+                             <RowDefinition Height="5px"></RowDefinition>
+                             <RowDefinition Height="60"></RowDefinition>
+                         </Grid.RowDefinitions>
+                         <Grid.ColumnDefinitions>
+                             <ColumnDefinition Width="60px"></ColumnDefinition>
+                             <ColumnDefinition Width="60px"></ColumnDefinition>
+                         </Grid.ColumnDefinitions>
+                         <Border   Grid.Column="0">
+                             <Image Source="Resources/TreeCoins.png"
+                                    Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Top"></Image>
+                         </Border>
+                         <TextBlock Grid.Row="0" Grid.Column="1" Margin="8,0,0,0" Name="TreeCoins" VerticalAlignment="Center" FontSize="24"></TextBlock>
+                         <Border Grid.Row="2" Grid.Column="0" >
+                                 <Image Source="Resources/AnimalCoins.png" Stretch="Uniform"
+                                             HorizontalAlignment="Left" VerticalAlignment="Top"></Image>
+                         </Border>
+                         <TextBlock Grid.Row="2" Grid.Column="1" Margin="8,0,0,0" Name="AnimalCoins" VerticalAlignment="Center" FontSize="24"></TextBlock>
+                     </Grid>
+                     
+                     <Grid Grid.Row="2"  Margin="0,10,0,0">
+                         <Grid.RowDefinitions>
+                             <RowDefinition Height="30px"></RowDefinition>
+                             <RowDefinition></RowDefinition>
+                         </Grid.RowDefinitions>
+                         <Border>
+                             <TextBlock FontSize="20"  Margin="4,0,0,0">Trees:</TextBlock>
+                         </Border>
+                         <ListBox Name="Trees" Margin="4,0,4,0" Grid.Row="1" MouseDown="CancelAnyStatus">
+                             <ListBoxItem Tag = "Pine" FontSize="18">Pine</ListBoxItem>
+                             <ListBoxItem Tag = "Birch" FontSize="18">Birch</ListBoxItem>
+                             <ListBoxItem Tag = "Oak" FontSize="18">Oak</ListBoxItem>
+                         </ListBox>
+                     </Grid>
+                     <Grid Grid.Row="3" Margin="0,10,0,0" >
+                         <Grid.RowDefinitions>
+                             <RowDefinition Height="30px"></RowDefinition>
+                             <RowDefinition></RowDefinition>
+                         </Grid.RowDefinitions>
+                         <Border >
+                             <TextBlock FontSize="20"  Margin="4,0,0,0">Animals:</TextBlock>
+                         </Border>
+                         <ListBox Name="Animals" Margin="4,0,4,0" Grid.Row="3" MouseDown="CancelAnyStatus">
+                             <ListBoxItem Tag = "Bear" FontSize="18">Bear</ListBoxItem>
+                             <ListBoxItem Tag = "Deer" FontSize="18">Deer</ListBoxItem>
+                             <ListBoxItem Tag = "Boar" FontSize="18">Boar</ListBoxItem>
+                         </ListBox>
+                     </Grid>
+                     <Grid Grid.Row="4" Margin="0,40,0,0">
+                         <Grid.RowDefinitions>
+                             <RowDefinition Height="60"></RowDefinition>
+                             <RowDefinition Height="5px"></RowDefinition>
+                             <RowDefinition Height="60"></RowDefinition>
+                             <RowDefinition Height="40"></RowDefinition>
+                             <RowDefinition Height="10px"></RowDefinition>
+                             <RowDefinition Height="60px"></RowDefinition>
+                         </Grid.RowDefinitions>
+                         <Button Grid.Row="0"
+                             HorizontalAlignment="Center"
+                             Width="180"
+                             Height="60"
+                             Content="Increase game speed"
+                             FontSize="18"
+                             Click="IncreaseGameSpeed"></Button>
+                         
+                         <Button Grid.Row="2"
+                             HorizontalAlignment="Center"
+                             Width="180"
+                             Height="60"
+                             Content="Decrease game speed"
+                             FontSize="18"
+                             Click="DecreaseGameSpeed"></Button>
+                         
+                          <TextBlock Grid.Row="3" FontSize="18" HorizontalAlignment="Center" Name="GameSpeed" Margin="4,0,0,0"></TextBlock>
+                         
+                         <Button Grid.Row="5"
+                                 HorizontalAlignment="Center"
+                                 Width="180"
+                                 Height="60"
+                                 Name="GenerateForestButton"
+                                 Content="Generate forest"
+                                 FontSize="18"
+                                 Click="GenerateForest"></Button>
+                     </Grid>
+
+                 </Grid>
+            </Border>    
+        </Grid>
+    
+    
+</Window>
